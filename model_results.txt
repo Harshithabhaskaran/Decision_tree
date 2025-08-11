@@ -1,0 +1,46 @@
+Dataset Shape: (303, 14)
+First 5 Rows:
+    age  sex  cp  trestbps  chol  fbs  restecg  thalach  exang  oldpeak  slope  ca  thal  target
+0   63    1   3       145   233    1        0      150      0      2.3      0   0     1       1
+1   37    1   2       130   250    0        1      187      0      3.5      0   0     2       1
+2   41    0   1       130   204    0        0      172      0      1.4      2   0     2       1
+3   56    1   1       120   236    0        1      178      0      0.8      2   0     2       1
+4   57    0   0       120   354    0        1      163      1      0.6      2   0     2       1
+
+Best Decision Tree Params: {'criterion': 'entropy', 'max_depth': 6, 'min_samples_leaf': 4, 'min_samples_split': 2}
+
+Optimized Decision Tree Accuracy: 0.8360655737704918
+
+Decision Tree Classification Report:
+               precision    recall  f1-score   support
+
+           0       0.77      0.93      0.84        29
+           1       0.92      0.75      0.83        32
+
+    accuracy                           0.84        61
+   macro avg       0.85      0.84      0.84        61
+weighted avg       0.85      0.84      0.84        61
+
+
+Best Random Forest Params: {'bootstrap': True, 'max_depth': 4, 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 100}
+
+Optimized Random Forest Accuracy: 0.8852459016393442
+
+Random Forest Classification Report:
+               precision    recall  f1-score   support
+
+           0       0.89      0.86      0.88        29
+           1       0.88      0.91      0.89        32
+
+    accuracy                           0.89        61
+   macro avg       0.89      0.88      0.88        61
+weighted avg       0.89      0.89      0.89        61
+
+
+Mean CV Accuracy (Optimized Decision Tree): 0.7589
+Mean CV Accuracy (Optimized Random Forest): 0.8314
+
+Final Model Comparison:
+            Model  Test Accuracy  CV Accuracy
+0  Decision Tree       0.836066     0.758907
+1  Random Forest       0.885246     0.831421
